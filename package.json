@@ -1,23 +1,26 @@
 {
-  "name": "nextjs-template",
+  "name": "browk-ui-kit",
+  "description": "A React component library based on the Browk UI Kit.",
+  "author": "evfjunior <evfjunior@protonmail.com>",
   "private": true,
-  "author": "evfjunior",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/evfjunior/nextjs-template.git"
+    "url": "git+https://github.com/evfjunior/browk-ui-kit.git"
   },
   "bugs": {
-    "url": "https://github.com/evfjunior/nextjs-template/issues"
+    "url": "https://github.com/evfjunior/browk-ui-kit/issues"
   },
-  "homepage": "https://github.com/evfjunior/nextjs-template#readme",
-  "description": "A complete project structure to create React web applications using NextJS and Typescript.",
+  "homepage": "https://github.com/evfjunior/browk-ui-kit#readme",
   "keywords": [
-    "nextjs",
-    "template",
-    "reactjs",
+    "react",
     "typescript",
-    ""
+    "component",
+    "library",
+    "ui",
+    "kit",
+    "styled-components",
+    "storybook"
   ],
   "scripts": {
     "cm": "cz",
