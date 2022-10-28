@@ -26,6 +26,11 @@ module.exports = function (plop) {
       },
       {
         type: 'add',
+        path: 'src/components/{{pascalCase name}}/styles.ts',
+        templateFile: 'generators/templates/styles.ts.hbs'
+      },
+      {
+        type: 'add',
         path: 'src/components/{{pascalCase name}}/test.tsx',
         templateFile: 'generators/templates/test.tsx.hbs'
       }

@@ -1,7 +1,9 @@
-type Props = {
+import * as S from './styles'
+
+type {{pascalCase name}}OwnProps = {
   children: React.ReactNode
 }
 
-export function {{pascalCase name}}({ children }: Props) {
-  return <article>{children}</article>
+export function {{pascalCase name}}({ children }: {{pascalCase name}}OwnProps) {
+  return <S.Container>{children}</S.Container>
 }
