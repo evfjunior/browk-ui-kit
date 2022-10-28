@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import type { AppProps } from 'next/app'
+import { ThemeProvider } from 'styled-components'
 
-import 'styles/globals.css'
+import { GlobalStyles, theme } from 'styles'
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -18,7 +19,10 @@ function App({ Component, pageProps }: AppProps) {
         <title>NextJS Template</title>
       </Head>
 
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+        <GlobalStyles />
+      </ThemeProvider>
     </>
   )
 }
