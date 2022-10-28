@@ -1,4 +1,7 @@
 import * as NextImage from 'next/image'
+import { ThemeProvider } from 'styled-components'
+
+import { GlobalStyles, theme } from '../src/styles'
 
 const customViewports = {
   galaxyS5: {
@@ -50,3 +53,12 @@ export const parameters = {
   },
   layout: 'centered'
 }
+
+export const decorators = [
+  Story => (
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Story />
+    </ThemeProvider>
+  )
+]
