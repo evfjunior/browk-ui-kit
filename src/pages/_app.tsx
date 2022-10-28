@@ -14,9 +14,9 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="A complete project structure to create React web applications using NextJS and Typescript"
+          content="A React component library based on the Browk UI Kit"
         />
-        <title>NextJS Template</title>
+        <title>Browk UI Kit</title>
       </Head>
 
       <ThemeProvider theme={theme}>
