@@ -50,8 +50,7 @@ export const parameters = {
   viewport: {
     viewports: customViewports,
     defaultViewport: 'iPhone11Pro'
-  },
-  layout: 'centered'
+  }
 }
 
 export const decorators = [
