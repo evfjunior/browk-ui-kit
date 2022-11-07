@@ -1,4 +1,11 @@
+import { keyframes } from 'styled-components'
+
 export const theme = {
+  animation: {
+    spin: keyframes`
+    from { transform: rotate(0deg) }
+    to { transform: rotate(359deg) }`
+  },
   border: {
     radius: '0.4rem',
     rounded: '5rem'
