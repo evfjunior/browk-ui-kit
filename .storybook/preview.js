@@ -1,5 +1,6 @@
 import * as NextImage from 'next/image'
 import { ThemeProvider } from 'styled-components'
+import { themes } from '@storybook/theming'
 
 import { GlobalStyles, theme } from '../src/styles'
 
@@ -47,9 +48,8 @@ export const parameters = {
     }
   },
   darkMode: { current: 'dark' },
-  viewport: {
-    viewports: customViewports,
-    defaultViewport: 'iPhone11Pro'
+  docs: {
+    theme: themes.dark
   }
 }
 
