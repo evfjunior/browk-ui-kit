@@ -1,0 +1,144 @@
+import Link from 'next/link'
+import { Canvas, Meta, Story } from '@storybook/addon-docs'
+import { Plus } from '@styled-icons/evaicons-solid'
+
+import { Clickable } from '.'
+
+<Meta title="MDX/Clickable" component={Clickable} />
+
+# Clickable
+
+`<Clickable />` is a polymorphic component that can be rendered as an `a` or a
+`button` element, you just need to set the `as` prop accordingly.<br />
+
+<br />
+
+## Buttons
+
+<br />
+
+### Variants
+
+Use the `variant` prop to change the component's appearance.
+The `primary` version is rendered by default:
+
+<Canvas withSource="open" withToolbar>
+  <Story name="Button: Primary">
+    <Clickable as="button">Primary</Clickable>
+  </Story>
+</Canvas>
+
+<Canvas withSource="open" withToolbar>
+  <Story name="Button: Secondary">
+    <Clickable as="button" variant="secondary">
+      Secondary
+    </Clickable>
+  </Story>
+</Canvas>
+
+Use the `fullWidth` prop to span the entire width of its parent container:
+
+<Canvas withSource="open" withToolbar>
+  <Story name="Button: Full Width">
+    <Clickable as="button" fullWidth>
+      Full width
+    </Clickable>
+  </Story>
+</Canvas>
+
+### States
+
+Loading:
+
+<Canvas withSource="open" withToolbar>
+  <Story name="Button: loading state">
+    <Clickable as="button" variant="primary" loading>
+      Loading
+    </Clickable>
+  </Story>
+</Canvas>
+
+Disabled:
+
+<Canvas withSource="open" withToolbar>
+  <Story name="Button: disabled state">
+    <Clickable as="button" variant="primaryWhite" disabled>
+      Disabled
+    </Clickable>
+  </Story>
+</Canvas>
+
+### With icon
+
+Use the `icon` prop to render an icon component. The default icon size is set to `24px`.
+
+<Canvas withSource="open" withToolbar>
+  <Story name="Button: with icon">
+    <Clickable as="button" variant="secondaryWhite" icon={<Plus />}>
+      With icon
+    </Clickable>
+  </Story>
+</Canvas>
+
+### Icon only
+
+For better accessibility, set the `accessibleLabel` with a clear description of
+the component's purpose.
+
+<Canvas withSource="open" withToolbar>
+  <Story name="Button: with icon only">
+    <Clickable
+      as="button"
+      acessibleLabel="add item"
+      icon={<Plus />}
+      variant="primary"
+    />
+  </Story>
+</Canvas>
+
+You can use the `rounded` prop for a circular button:
+
+<Canvas withSource="open" withToolbar>
+  <Story name="Button: rounded with icon only">
+    <Clickable
+      as="button"
+      acessibleLabel="add item"
+      icon={<Plus />}
+      variant="primary"
+      rounded
+    />
+  </Story>
+</Canvas>
+
+## Anchors
+
+You can use a NextJS `Link` component to create internal links.<br />
+Make sure to set the `passHref` and `legacyBehavior` props to correctly
+forward the `ref` object to the underlying `a` element.
+
+<Canvas withSource="open" withToolbar>
+  <Story name="Anchor: Internal link">
+    <Link href="/link" passHref legacyBehavior>
+      <Clickable as="a" variant="flat">
+        Internal Link
+      </Clickable>
+    </Link>
+  </Story>
+</Canvas>
+
+Or use it directly for external links:
+
+<Canvas withSource="open" withToolbar>
+  <Story name="Anchor: External Link">
+    <Clickable as="a" href="/external_page" target="_blank" variant="flatWhite">
+      External Link
+    </Clickable>
+  </Story>
+</Canvas>
+
+---
+
+**Note**: Disabling an `a` element is not a good practice. Avoid using the
+`disabled` prop when rendering a `Clickable` component as a link.
+
+---
