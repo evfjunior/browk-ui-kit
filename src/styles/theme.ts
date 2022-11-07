@@ -1,4 +1,4 @@
-import { keyframes } from 'styled-components'
+import { css, keyframes } from 'styled-components'
 
 export const theme = {
   animation: {
@@ -33,6 +33,18 @@ export const theme = {
     red: 'hsl(2, 66%, 58%)',
     redS: 'hsl(2, 64%, 47%)',
     redL: 'hsl(0, 61%, 87%)'
+  },
+  display: {
+    flexCenter: () => css`
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    `,
+    inlineFlexCenter: () => css`
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    `
   },
   font: {
     family: {
