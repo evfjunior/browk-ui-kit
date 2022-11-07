@@ -38,6 +38,7 @@
     "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
+    "@storybook/addon-docs": "^6.5.13",
     "@storybook/cli": "^6.5.9",
     "next": "12.3.0",
     "react": "18.2.0",
