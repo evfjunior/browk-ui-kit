@@ -52,6 +52,16 @@ export const theme = {
       heading:
         "Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif"
     },
+    lineHeight: {
+      small: '2rem',
+      medium: '2.4rem',
+      large: '2.8rem',
+      xlarge: '3.2rem',
+      xxlarge: '4rem',
+      '2xl': '4.8rem',
+      '3xl': '5.6rem',
+      '4xl': '6.4rem'
+    },
     size: {
       small: '1.3rem',
       medium: '1.6rem',
