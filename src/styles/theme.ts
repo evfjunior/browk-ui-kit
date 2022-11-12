@@ -11,6 +11,7 @@ export const theme = {
     rounded: '5rem'
   },
   colors: {
+    currentColor: 'currentColor',
     primary: 'hsl(257, 74%, 57%)',
     primaryHover: 'hsl(257, 54%, 45%)',
     primaryActive: 'hsl(257, 52%, 36%)',
