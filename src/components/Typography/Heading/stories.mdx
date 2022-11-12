@@ -1,0 +1,39 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs'
+
+import { Heading } from '.'
+
+<Meta title="MDX/Heading" component={Heading} />
+
+# Heading
+
+`<Heading />` is a polymorphic component which dinamically renders heading elements, from `h1` to `h6`.
+
+<br />
+
+## Levels
+
+Each heading level is controlled by the `level` prop, the `h2` is rendered by default:
+
+<Canvas withSource="open" withToolbar>
+  <Story name="Heading: levels">
+    <Heading level="h1">56/64 Heading 1</Heading>
+    <Heading>48/56 Heading 2</Heading>
+    <Heading level="h3">40/48 Heading 3</Heading>
+    <Heading level="h4">32/40 Heading 4</Heading>
+    <Heading level="h5">32/24 Heading 5</Heading>
+    <Heading level="h6">20/28 Heading 6</Heading>
+  </Story>
+</Canvas>
+
+## Colors
+
+Use the `color` prop to choose from `black` (default), `white` or `primary`.
+Set it to `currentColor` to automatically pick up the color from its parent container:
+
+<Canvas withSource="open" withToolbar>
+  <Story name="Heading: colors">
+    <Heading>Black Heading</Heading>
+    <Heading color="primary">Primary Heading</Heading>
+    <Heading color="white">White Heading </Heading>
+  </Story>
+</Canvas>
