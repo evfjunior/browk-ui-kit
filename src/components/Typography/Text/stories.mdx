@@ -1,0 +1,50 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs'
+
+import { Text } from '.'
+
+<Meta title="MDX/Text" component={Text} />
+
+# Text
+
+`<Text />` is a polymorphic component which dinamically renders a `p` or a `span` element.<br />
+Use the `as` prop to control which element you want to render and the `size` for the text.
+A `medium` size is rendered by default:
+
+<Canvas withSource="open" withToolbar>
+  <Story name="Text: span and p">
+    <Text as="span" size="large">
+      20/28 Large span
+    </Text>
+    <Text as="p" size="large">
+      20/28 Large paragraph
+    </Text>
+    <br />
+    <Text as="span">16/24 Medium span</Text>
+    <Text as="p">16/24 p Medium paragraph</Text>
+    <br />
+    <Text as="span" size="small">
+      13/20 Small span
+    </Text>
+    <Text as="p" size="small">
+      13/20 Small paragraph
+    </Text>
+  </Story>
+</Canvas>
+
+<br />
+
+## Colors
+
+Use the `color` prop to choose from `black` (default), `white` or `primary`.<br />
+Set it to `currentColor` to automatically pick up the color from its parent container:
+
+<Canvas withSource="open" withToolbar>
+  <Story name="Text: colors">
+    <Text as="span" color="primary">
+      Primary span
+    </Text>
+    <Text as="p" color="white" size="large">
+      Large White Paragraph
+    </Text>
+  </Story>
+</Canvas>
