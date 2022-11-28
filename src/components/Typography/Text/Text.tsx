@@ -20,10 +20,9 @@ export type TextOwnProps = {
 }
 
 type ParagraphProps = TextOwnProps &
-  Omit<HTMLAttributes<HTMLParagraphElement>, keyof TextOwnProps> & { as: 'p' }
+  HTMLAttributes<HTMLParagraphElement> & { as: 'p' }
 
-type SpanProps = TextOwnProps &
-  Omit<HTMLAttributes<HTMLSpanElement>, keyof TextOwnProps> & { as: 'span' }
+type SpanProps = TextOwnProps & HTMLAttributes<HTMLSpanElement> & { as: 'span' }
 
 export type TextProps = ParagraphProps | SpanProps
 
