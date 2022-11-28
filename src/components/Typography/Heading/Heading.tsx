@@ -1,8 +1,8 @@
 import { HTMLAttributes } from 'react'
 
-import * as S from './styles'
+import type { TextColor } from 'components/Typography'
 
-type HeadingColors = 'black' | 'currentColor' | 'primary' | 'white'
+import * as S from './styles'
 
 type HeadingOwnProps = {
   /** Heading content */
@@ -11,7 +11,7 @@ type HeadingOwnProps = {
    * Text color
    * @default: black
    */
-  color?: HeadingColors
+  color?: TextColor
   /**
    * Heading level from h1 to h6
    * @default: 'h2'
