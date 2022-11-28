@@ -1,9 +1,8 @@
 import { HTMLAttributes } from 'react'
 
-import * as S from './styles'
+import type { TextColor, TextSize } from 'components/Typography'
 
-type TextColors = 'black' | 'currentColor' | 'primary' | 'white'
-type TextSizes = 'small' | 'medium' | 'large'
+import * as S from './styles'
 
 export type TextOwnProps = {
   /** Text content */
@@ -12,12 +11,12 @@ export type TextOwnProps = {
    * Text color
    * @default: black
    */
-  color?: TextColors
+  color?: TextColor
   /**
    * Text size
    * @default: medium
    */
-  size?: TextSizes
+  size?: TextSize
 }
 
 type ParagraphProps = TextOwnProps &
