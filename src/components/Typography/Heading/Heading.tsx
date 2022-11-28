@@ -25,10 +25,11 @@ export type HeadingProps = HeadingOwnProps &
 export function Heading({
   children,
   color = 'black',
-  level = 'h2'
+  level = 'h2',
+  ...rest
 }: HeadingProps): JSX.Element {
   return (
-    <S.Component color={color} level={level}>
+    <S.Component color={color} level={level} {...rest}>
       {children}
     </S.Component>
   )
