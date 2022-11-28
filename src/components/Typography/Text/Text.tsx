@@ -6,8 +6,17 @@ type TextColors = 'black' | 'currentColor' | 'primary' | 'white'
 type TextSizes = 'small' | 'medium' | 'large'
 
 export type TextOwnProps = {
+  /** Text content */
   children: React.ReactNode
+  /**
+   * Text color
+   * @default: black
+   */
   color?: TextColors
+  /**
+   * Text size
+   * @default: medium
+   */
   size?: TextSizes
 }
 
